@@ -1,0 +1,30 @@
+kube-apiserver:
+   Frontend to the Kubernetes control plane. Accepts REST API calls (e.g., kubectl).
+etcd:
+   Distributed key-value store for all cluster data (state, config, secrets).
+kube-scheduler:
+    Assigns pods to the best available worker node based on resource availability, policies, affinity, etc.
+kube-controller-manager:
+      Runs controllers that handle cluster-level functions like:
+           • Node controller (monitor nodes)
+           • Replication controller (manage replica sets)
+           • Endpoints controller (update service endpoints)
+
+cloud-controller-manager:
+   Integrates with cloud-specific APIs (e.g., AWS ELB, volume management).
+
+Kubernetes Worker Node (Minion):
+   Worker nodes run the actual workloads (pods/containers) and are managed by the Master.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Kubernetes Worker Node (Minion):
+  Worker nodes run the actual workloads (pods/containers) and are managed by the Master.
+
+
+kubelet:
+  Talks to the API server, ensures containers in a pod are running as expected. Reports health/status.
+kube-proxy:
+   Handles network routing to ensure communication between services, pods across nodes.
+Container Runtime:
+  Pulls images, starts/stops containers (e.g., Docker, containerd, CRI-O).
+
+
